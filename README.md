@@ -1,3 +1,5 @@
+[简体中文](README.md) | [English](README_en.md)
+
 # IPv6 Monitor & Email Notifier
 
 这是一个极其轻量的 Windows 后台程序，用于在**系统开机**或**从休眠/睡眠中唤醒**时，自动检测本机的公网 IPv6 地址，并通过 SMTP 发送到指定的邮箱。
