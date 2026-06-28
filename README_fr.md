@@ -9,6 +9,12 @@ Il s'agit d'une application d'arrière-plan Windows extrêmement légère qui d�
 - **Exécution Unique** : Ne reste pas en arrière-plan dans une boucle infinie. Il s'exécute une fois, envoie l'e-mail et se ferme immédiatement, préservant ainsi strictement les ressources du système.
 - **Déclencheurs Système** : S'intègre parfaitement avec le Planificateur de tâches Windows pour le déclenchement des événements système.
 
+
+## Cas d'utilisation
+- **Bureau à distance (RDP)** : Si vous devez accéder à distance à votre PC personnel depuis votre lieu de travail, mais que votre réseau domestique ne dispose pas d'une adresse IPv4 statique, vous pouvez vous connecter directement à l'aide de la nouvelle adresse IPv6 envoyée à votre e-mail.
+- **Serveur Personnel / NAS** : Pour les utilisateurs exécutant un NAS ou un serveur Web sur un PC standard, cette application transmettra instantanément la nouvelle adresse IP d'accès à l'e-mail de votre téléphone si l'IP du routeur change ou si le PC redémarre après une panne de courant.
+- **Alternative DDNS Sans Dépendance** : Par rapport à la configuration de services de DNS Dynamique (DDNS) complexes, cette approche de notification par e-mail est beaucoup plus infaillible, stable et ne nécessite aucun achat de nom de domaine.
+
 ## Utilisation
 
 > [!IMPORTANT]

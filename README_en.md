@@ -9,6 +9,12 @@ This is an extremely lightweight Windows background application that automatical
 - **Single Run**: Does not stay resident in the background with an endless loop. It runs once, sends the email, and exits immediately, strictly preserving system resources.
 - **System-Level Triggers**: Perfectly integrates with Windows Task Scheduler for system event triggering.
 
+
+## Use Cases
+- **Remote Desktop (RDP)**: If you need to remotely access your home PC from work but your home network lacks a static IPv4, you can connect directly using the fresh IPv6 address sent to your email.
+- **Personal Server / NAS**: For users running a NAS or web server on a standard PC, this app will instantly push the new access IP to your phone's email if the router's IP changes or the PC reboots after a power outage.
+- **Dependency-Free DDNS Alternative**: Compared to setting up complex Dynamic DNS (DDNS) services, this email notification approach is much more foolproof, stable, and requires no domain name purchases.
+
 ## Usage
 
 > [!IMPORTANT]
