@@ -44,12 +44,23 @@ pyinstaller -F -w ipv6.py
 ```
 Après la compilation, déplacez le fichier `ipv6.exe` généré vers le répertoire racine du projet (assurez-vous qu'il se trouve dans le même répertoire que `config.json`).
 
-### 4. Configurer le Réveil Automatique du Planificateur de Tâches Windows
-Configurez le Planificateur de tâches Windows pour exécuter automatiquement `ipv6.exe` au **Démarrage** et au **Réveil** :
+### 4. Configurer le Réveil Automatique du Planificateur de Tâches Windows (Tutoriel GUI)
 
-1. Appuyez sur `Win + X` et ouvrez **Windows PowerShell (Admin)**.
-2. Accédez au répertoire de votre projet et importez la tâche (en supposant que votre code se trouve dans `D:\ipv6`, remplacez le chemin dans le fichier XML en conséquence) :
-```powershell
-schtasks /create /tn "IPv6_Monitor" /xml .\task.xml /f
-```
-3. Une fois importé avec succès, le script se déclenchera automatiquement et enverra l'e-mail à chaque fois que le système démarrera ou se réveillera de la veille/hibernation.
+Pour exécuter le programme de manière transparente en arrière-plan au démarrage et lors de la sortie de veille, configurez-le via le "Planificateur de tâches" intégré à Windows :
+
+1. **Ouvrir le Planificateur de tâches** : Appuyez sur `Win + S`, recherchez "Planificateur de tâches" et ouvrez-le.
+2. **Créer une tâche** : Dans le volet Actions à droite, cliquez sur **"Créer une tâche..."** (Remarque : ne cliquez pas sur "Créer une tâche de base").
+3. **Général** :
+   - Nom : `IPv6_Monitor`.
+   - Cochez **"Masqué"** en bas.
+   - Cochez **"Exécuter même si l'utilisateur n'est pas connecté"** et **"Exécuter avec les autorisations maximales"**.
+4. **Déclencheurs** (Créez les deux déclencheurs suivants) :
+   - Déclencheur 1 : Lancer la tâche **"À l'ouverture de session"**.
+   - Déclencheur 2 : Lancer la tâche **"Sur un événement"**. Journal : **Système**, Source : **Power-Troubleshooter**, ID d'événement : **1** (Cet événement indique la sortie de veille/hibernation).
+5. **Actions** :
+   - Action : **"Démarrer un programme"**.
+   - **Programme/script** : Parcourez et sélectionnez votre `ipv6.exe` empaqueté.
+   - **Commencer dans** : Entrez le chemin absolu du dossier contenant `ipv6.exe` (ex. `D:\ipv6\`, **assurez-vous qu'il se termine par une barre oblique inverse et n'utilisez pas de guillemets**).
+6. **Conditions** :
+   - Décochez "Ne démarrer la tâche que si l'ordinateur est sur secteur" (si vous utilisez un ordinateur portable).
+7. Cliquez sur OK et entrez le mot de passe de votre compte Windows pour enregistrer !
