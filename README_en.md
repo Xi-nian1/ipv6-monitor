@@ -1,4 +1,4 @@
-[简体中文](README.md) | [English](README_en.md)
+[简体中文](README.md) | [English](README_en.md) | [日本語](README_ja.md) | [Français](README_fr.md)
 
 # IPv6 Monitor & Email Notifier
 
