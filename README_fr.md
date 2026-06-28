@@ -11,6 +11,12 @@ Il s'agit d'une application d'arrière-plan Windows extrêmement légère qui d�
 
 ## Utilisation
 
+> [!IMPORTANT]
+> **Préparation :** Avant de commencer, vous devez modifier les deux fichiers suivants pour les adapter à votre environnement local :
+> 1. **`config.json`** : Vous devez renseigner votre e-mail d'expéditeur, votre code d'autorisation SMTP et l'e-mail du destinataire.
+> 2. **`task.xml`** : Si vous souhaitez configurer le démarrage automatique, vous devez remplacer les chemins fictifs à l'intérieur par vos chemins absolus réels.
+
+
 ### 1. Configuration
 Copiez `config.example.json`, renommez-le en `config.json`, et remplissez votre configuration e-mail :
 ```json

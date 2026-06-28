@@ -11,6 +11,12 @@ This is an extremely lightweight Windows background application that automatical
 
 ## Usage
 
+> [!IMPORTANT]
+> **Preparation:** Before you begin, you need to modify the following two files to match your local environment:
+> 1. **`config.json`**: You must fill in your own sender email, SMTP auth code, and receiver email.
+> 2. **`task.xml`**: If you want to setup auto-wake and auto-start, you must replace the placeholder paths inside it with your actual absolute paths.
+
+
 ### 1. Configuration
 Copy `config.example.json`, rename it to `config.json`, and fill in your email configuration:
 ```json
