@@ -1,0 +1,15 @@
+{
+    "from_email": "your_email@qq.com",
+    "auth_code": "your_smtp_auth_code",
+    "to_email": "receiver_email@qq.com",
+    "check_interval": 300,
+    "retry_times": 3,
+    "log_file": "ipv6_sender.log",
+    "ip_check_services": [
+        "https://ipv6.icanhazip.com",
+        "https://v6.ident.me",
+        "https://ipv6.lookup.test-ipv6.com/ip/",
+        "https://ipv6.whatismyip.akamai.com",
+        "https://ifconfig.co/ip"
+    ]
+}
