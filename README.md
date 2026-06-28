@@ -23,6 +23,12 @@
 > 2. **`task.xml`**：如果您需要设置开机和唤醒自启，需要将其中的路径替换为您实际存放程序的绝对路径。
 
 
+
+### 0. 下载与解压
+1. 前往本项目的 [Releases 页面](https://github.com/Xi-nian1/ipv6-monitor/releases)。
+2. 找到并点击下载最新的压缩包文件（例如 `IPv6_Monitor_v1.0.0.zip`）。
+3. 将下载的压缩包解压到您电脑上的任意文件夹中（例如 `D:\ipv6-monitor`）。
+
 ### 1. 配置文件
 复制 `config.example.json` 并重命名为 `config.json`，填写您的邮箱配置：
 ```json

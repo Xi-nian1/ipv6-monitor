@@ -23,6 +23,12 @@
 > 2. **`task.xml`**: 自動起動を設定する場合は、内部のプレースホルダー パスを実際の絶対パスに置き換える必要があります。
 
 
+
+### 0. ダウンロードと解凍
+1. このプロジェクトの [Releases ページ](https://github.com/Xi-nian1/ipv6-monitor/releases) に移動します。
+2. 最新の zip ファイル（例: `IPv6_Monitor_v1.0.0.zip`）を見つけてダウンロードします。
+3. ダウンロードした zip ファイルをコンピューター上の任意のフォルダー（例: `D:\ipv6-monitor`）に解凍します。
+
 ### 1. 設定
 `config.example.json` をコピーして `config.json` に名前を変更し、メール設定を入力します：
 ```json

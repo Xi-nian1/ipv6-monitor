@@ -23,6 +23,12 @@ This is an extremely lightweight Windows background application that automatical
 > 2. **`task.xml`**: If you want to setup auto-wake and auto-start, you must replace the placeholder paths inside it with your actual absolute paths.
 
 
+
+### 0. Download and Extract
+1. Go to the [Releases page](https://github.com/Xi-nian1/ipv6-monitor/releases) of this project.
+2. Find and download the latest zip file (e.g., `IPv6_Monitor_v1.0.0.zip`).
+3. Extract the downloaded zip file to any folder on your computer (e.g., `D:\ipv6-monitor`).
+
 ### 1. Configuration
 Copy `config.example.json`, rename it to `config.json`, and fill in your email configuration:
 ```json

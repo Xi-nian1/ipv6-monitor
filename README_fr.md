@@ -23,6 +23,12 @@ Il s'agit d'une application d'arrière-plan Windows extrêmement légère qui d�
 > 2. **`task.xml`** : Si vous souhaitez configurer le démarrage automatique, vous devez remplacer les chemins fictifs à l'intérieur par vos chemins absolus réels.
 
 
+
+### 0. Téléchargement et Extraction
+1. Accédez à la [page Releases](https://github.com/Xi-nian1/ipv6-monitor/releases) de ce projet.
+2. Trouvez et téléchargez le dernier fichier zip (ex. `IPv6_Monitor_v1.0.0.zip`).
+3. Extrayez le fichier zip téléchargé dans n'importe quel dossier de votre ordinateur (ex. `D:\ipv6-monitor`).
+
 ### 1. Configuration
 Copiez `config.example.json`, renommez-le en `config.json`, et remplissez votre configuration e-mail :
 ```json
