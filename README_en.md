@@ -44,23 +44,14 @@ pyinstaller -F -w ipv6.py
 ```
 After building, move the generated `ipv6.exe` to the project root directory (ensure it is in the same directory as `config.json`).
 
-### 4. Setup Windows Task Scheduler Auto-Wake (GUI Tutorial)
+### 4. Setup Windows Task Scheduler Auto-Wake
 
-To run the program seamlessly in the background on startup and when waking up from sleep, configure it via the built-in Windows "Task Scheduler":
+We need to configure the Windows Task Scheduler to automatically run `ipv6.exe` on **Startup** and **Wake up**:
 
-1. **Open Task Scheduler**: Press `Win + S`, search for "Task Scheduler", and open it.
-2. **Create Task**: On the right Actions pane, click **"Create Task..."** (Note: Do not click "Create Basic Task").
-3. **General**:
-   - Name: `IPv6_Monitor`.
-   - Check **"Hidden"** at the bottom.
-   - Check **"Run whether user is logged on or not"** and **"Run with highest privileges"**.
-4. **Triggers** (Create the following two triggers):
-   - Trigger 1: Begin the task **"At log on"**.
-   - Trigger 2: Begin the task **"On an event"**. Select Log: **System**, Source: **Power-Troubleshooter**, and Event ID: **1** (This event indicates waking up from sleep/hibernation).
-5. **Actions**:
-   - Action: **"Start a program"**.
-   - **Program/script**: Browse and select your packaged `ipv6.exe`.
-   - **Start in**: Enter the absolute path of the folder containing `ipv6.exe` (e.g., `D:\ipv6\`, **make sure it ends with a backslash and do not use quotes**).
-6. **Conditions**:
-   - Uncheck "Start the task only if the computer is on AC power" (if using a laptop).
-7. Click OK and enter your Windows account password to save!
+1. **Edit the XML paths**: Open the `task.xml` file in Notepad. Locate the `<Command>` and `<WorkingDirectory>` tags at the very bottom, and replace `C:\path\to\your\folder` with the actual absolute path where you saved `ipv6.exe`. Save the file.
+2. **Open Terminal**: Press `Win + X` and open **Windows PowerShell (Admin)** or **Terminal (Admin)**.
+3. **Import Task**: In the window, use the `cd` command to navigate to your project directory, then run the following command to import the task:
+```powershell
+schtasks /create /tn "IPv6_Monitor" /xml .\task.xml /f
+```
+4. Once successfully imported, the script will automatically run silently in the background and send the email every time the system boots up or wakes from sleep/hibernation.
